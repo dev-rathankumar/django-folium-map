@@ -15,13 +15,13 @@ def calculate_distance(request):
     geolocator = Nominatim(user_agent='measurements')
 
     # works in live server
-    # ip_ = get_ip_address(request) 
+    # ip_ = get_ip_address(request)
     # print(ip_)
     ip = '162.254.206.227'
     country, city, lat, lon = get_geo(ip)
 
     location = geolocator.geocode(city)
-    
+
     # ip location coordinates
     l_lat = lat
     l_lon = lon
